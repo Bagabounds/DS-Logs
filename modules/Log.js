@@ -23,7 +23,7 @@ var Log = Class.create({
         this.CONSTANTS = constants;
         this.transaction = $transaction.toJSON();
         this.setSource(this._getBundleName());
-        var options = this._getOptions();
+        this.options = this._getOptions();
         this.setLevel(options.level);
     },
 

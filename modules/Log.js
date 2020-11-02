@@ -24,7 +24,7 @@ var Log = Class.create({
         this.transaction = $transaction.toJSON();
         this.setSource(this._getBundleName());
         this.options = this._getOptions();
-        this.setLevel(options.level);
+        this.setLevel(this.options.level);
     },
 
     /**

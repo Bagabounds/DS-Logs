@@ -137,7 +137,7 @@ var Log = Class.create({
     _prepareMessage: function(rawArgs) {
 
         var LogID, message, args = this._toArray(rawArgs);
-        LogId = this._createLog(message);
+        LogID = this._createLog(message);
 
         if (this.options.type !== 1) {
             console.log(LogId + ' | ' + message);

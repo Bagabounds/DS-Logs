@@ -82,7 +82,7 @@ var Log = Class.create({
      * @returns {boolean} In case of an error log we want the response to be false so the log can be used in a return statement
      */
     _log: function(level, rawArgs) {
-        if (!this.options || !this.options.active) return;
+        if (!this.options || this.options.active == 0) return;
         // Do not (for example) log info and debug messages if you only want to see errors and warnings
         // (*1 to do an integer comparison if the number is a string
         if (this.level * 1 < level) {

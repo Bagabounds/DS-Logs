@@ -121,7 +121,7 @@ var Log = Class.create({
     },
     _getOptions: function() {
         var options = new FRecord(this.CONSTANTS.TABLES.LOGOPTIONS);
-        options.addSearch('bundle', this.source);
+        options.addSearch('bundle', this.transaction.bundle_id);
         options.search();
         if (options.hasNext()) {
             options.next();

@@ -175,7 +175,7 @@ var Log = Class.create({
         frLog.message = message;
         frLog.timestamp = new Date().getTime();
         frLog.user = this.transaction.active_user;
-        return rLog.insert();
+        return frLog.insert();
     },
 
     /**

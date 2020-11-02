@@ -47,6 +47,10 @@ var Log = Class.create({
         this.level = level;
     },
 
+    test: function(message) {
+        console.log(message)
+    },
+
     // --------------------------------------------------
     // External fuctions | Complete passthrough
     // --------------------------------------------------

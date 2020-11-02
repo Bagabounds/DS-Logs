@@ -140,7 +140,7 @@ var Log = Class.create({
         LogID = this._createLog(message);
 
         if (this.options.type !== 1) {
-            console.log(LogId + ' | ' + message);
+            console.log(LogID + ' | ' + message);
         }
 
         // Create the log message in which arguments are seperated by a newline

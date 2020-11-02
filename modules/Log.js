@@ -100,7 +100,6 @@ var Log = Class.create({
                 ' | source ' + this.source + ' | ' + message);
         }
 
-        this._createLog(level, message);
 
         return this._response(level);
     },

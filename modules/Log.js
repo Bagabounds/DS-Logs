@@ -93,7 +93,7 @@ var Log = Class.create({
 
         // Allow for 'printing' every log message to the 'console'. Helpfull when debugging in a background script
 
-        var LogID = this._createLog(message);
+        var LogID = this._createLog(level, message);
 
         if (this.options.type !== 1) {
             console.log('ID = ' + LogID + ' | Message = ' + message + ' | Source = ' + this.source);

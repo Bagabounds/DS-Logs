@@ -116,7 +116,7 @@ var Log = Class.create({
         sourceBundle.search();
         if (sourceBundle.hasNext()) {
             sourceBundle.next();
-            return sourceBundle.name;
+            return sourceBundle.title;
         }
     },
     _getOptions: function() {

@@ -92,12 +92,11 @@ var Log = Class.create({
         var message = this._prepareMessage(rawArgs);
 
         // Allow for 'printing' every log message to the 'console'. Helpfull when debugging in a background script
-        if (this.backgroundLog) {
-            console.log(this.utils.getTimestamp() + ' | ' +
-                this.utils.find(Object.keys(this.CONSTANTS.LOG), function(v) {
-                    return this.CONSTANTS.LOG[v] == level;
-                }, this) +
-                ' | source ' + this.source + ' | ' + message);
+
+        var LogID = this._createLog(message);
+
+        if (this.options.type !== 1) {
+            console.log('ID = ' + LogID + ' | Message = ' + message + ' | Source = ' + this.source);
         }
 
 
@@ -136,11 +135,6 @@ var Log = Class.create({
     _prepareMessage: function(rawArgs) {
 
         var LogID, message, args = this._toArray(rawArgs);
-        LogID = this._createLog(message);
-
-        if (this.options.type !== 1) {
-            console.log(LogID + ' | ' + message);
-        }
 
         // Create the log message in which arguments are seperated by a newline
         return args.join('\n');
